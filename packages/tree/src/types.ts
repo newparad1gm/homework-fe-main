@@ -51,6 +51,7 @@ export enum ValueFormat {
   Currency = "currency",
   Integer = "integer",
   Decimal = "decimal",
+  Percent = "percent",
 }
 
 /**
@@ -132,4 +133,13 @@ export type Tree = MultiDirectedGraph<TreeNode, TreeEdge, TreeInfo>;
 /**
  * TODO: IMPLEMENT THIS
  */
-export type YourTableTypeOrInterfaceOrFunctionEtc = never;
+export type Table = TableRow[];
+
+export type TableRow = {
+  city: string,
+  totalOrders?: number,
+  cartConversion?: number,
+  totalCarts?: number,
+  earliest?: Date,
+  latest?: Date,
+}
