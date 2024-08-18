@@ -69,3 +69,8 @@ $ `pnpm run storybook`
 
 - Create a GitHub repository, push the original assignment to `main`, create a branch with your submission and open a PR. Your Trace contact will provide users to add as contributors to the repository for review. 
 - Ensure Storybook is correctly set up for local running.
+
+### Response
+
+- Used recharts to render the chart, will require `pnpm i` on the interface package again
+- Added rendered image example [Waterfall chart rendered example](/images/waterfallchart_rendered.png)
