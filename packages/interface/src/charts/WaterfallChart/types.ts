@@ -45,11 +45,31 @@ export type ChangeColumn = {
 };
 
 /**
+ * Represents a change column in the waterfall chart.
+ * Reflects a change or increment in the data series and includes a label for the y-axis.
+ */
+export type EndColumn = {
+  type: ColumnType.End;
+  /** The label for the column, displayed on the y-axis. */
+  label: string;
+  /** The numeric value indicating the change, to be formatted based on the specified format. */
+  value: number;
+};
+
+export type Column = StartColumn | ChangeColumn | EndColumn;
+
+export type ChartColumn = Column & {
+  accumulatedValue: number;
+  lower: number;
+  upper: number;
+}
+
+/**
  * Custom type representing the provided series of columns for the waterfall chart.
  * It starts with a StartColumn, followed by one or more ChangeColumns.
  * Each column includes a label for the y-axis, reflecting its identity or description.
  */
-type Series = [StartColumn, ...ChangeColumn[]];
+type Series = [StartColumn, ...ChangeColumn[], EndColumn];
 
 /**
  * Prop types for the Waterfall Chart component.

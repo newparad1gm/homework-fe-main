@@ -31,3 +31,12 @@ Implement the `treeTable` function in `table.ts` to transform a tree represented
 - This part of the assignment will take place within the `packages/tree` directory of your project setup.
 
 - Implement unit tests that validate your algorithm and types for a variety of different graph structures.
+
+### Response
+
+- Created [Table](/packages/tree/src/types.ts#L136) and [TableRow](/packages/tree/src/types.ts#L141) types to store this data
+- Updated [testing_trees.test.ts](/packages/tree/src/__testdata__/testing_trees.test.ts) with a set of test cases 
+- Test cases use assertion data from [assertion.ts](/packages/tree/src/__testdata__/assertions.ts)
+- In the future, this will use an API with a database or data warehouse to store this data
+- Additional data processing can be done with a library like [Arquero](https://www.npmjs.com/package/arquero)
+  
